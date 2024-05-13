@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Table, Space, Input, Button, DatePicker } from 'antd';
 import axios from 'axios';
 import moment from 'moment';
-
-const { RangePicker } = DatePicker;
+const { RangePicker } = DatePicker
 
 const LogTable = () => {
   const [logs, setLogs] = useState([]);
@@ -11,6 +10,9 @@ const LogTable = () => {
   const [levelFilter, setLevelFilter] = useState('');
   const [resourceIdFilter, setResourceIdFilter] = useState('');
   const [timestampRange, setTimestampRange] = useState([]);
+
+
+  
 
   const fetchData = async () => {
     try {
@@ -118,5 +120,4 @@ const LogTable = () => {
     </div>
   );
 };
-
 export default LogTable;
