@@ -10,11 +10,7 @@ const LogTable = () => {
   const [levelFilter, setLevelFilter] = useState('');
   const [resourceIdFilter, setResourceIdFilter] = useState('');
   const [timestampRange, setTimestampRange] = useState([]);
-
-
-  
-
-  const fetchData = async () => {
+const fetchData = async () => {
     try {
       const response = await axios.get('http://localhost:3000/api/logs');
       setLogs(response.data);
@@ -120,4 +116,6 @@ const LogTable = () => {
     </div>
   );
 };
+
+
 export default LogTable;
